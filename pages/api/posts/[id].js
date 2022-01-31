@@ -1,0 +1,26 @@
+const dbConnection = require("../../../dbConnection.js")
+const Post = require("../../../models/post.js")
+
+dbConnection()
+
+const getPost = async (req, res) => {
+  const {
+    query: { id },
+    method,
+  } = req
+
+  switch (method) {
+    case "GET":
+      try {
+        const post = await Post.findById(id)
+        res.status(200).json({ data: post })
+      } catch (error) {
+        res.status(400).json({ message: "error" })
+      }
+      break
+
+    default:
+      res.status(400).json({ message: "error" })
+  }
+}
+module.exports = getPost
