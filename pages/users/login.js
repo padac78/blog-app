@@ -24,7 +24,7 @@ const Login = ({ login }) => {
                 placeholder="you@example.com"
               />
               <p className=" mt-2 text-sm text-pink-600 peer-invalid:visible">
-                Veuillez renseignez un mail valide.
+                Veuillez renseignez un mail valide svp
               </p>
             </label>
             <label htmlFor="password" className="mb-2 italic">

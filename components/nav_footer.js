@@ -7,7 +7,7 @@ export default function Footer() {
           <div className="p-4 text-center text-gray-700"></div>
           <a className="flex justify-center bg-sky-700 px-4 py-2 text-white hover:bg-sky-900 sm:px-8 sm:py-3">
             {" "}
-            © Made By Enzo Adam and P-A with Love
+            © Made By Enzo Adam and P-A with Love.
           </a>
         </div>
       </footer>
