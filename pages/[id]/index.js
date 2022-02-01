@@ -1,7 +1,6 @@
-const fetch = require("isomorphic-unfetch");
-import Navuser from "../../components/nav_user";
-import Footer from "../../components/nav_footer";
-import Link from "next/Link";
+const fetch = require("isomorphic-unfetch")
+import Navuser from "../../components/nav_user"
+import Footer from "../../components/nav_footer"
 
 const Post = ({ post }) => {
   return (
@@ -16,14 +15,14 @@ const Post = ({ post }) => {
       </div>
       <Footer />
     </body>
-  );
-};
+  )
+}
 
 Post.getInitialProps = async ({ query: { id } }) => {
-  const res = await fetch(`http://localhost:3000/api/posts/${id}`);
-  const { data } = await res.json();
+  const res = await fetch(`http://localhost:3000/api/posts/${id}`)
+  const { data } = await res.json()
 
-  return { post: data };
-};
+  return { post: data }
+}
 
-module.exports = Post;
+module.exports = Post

@@ -1,7 +1,7 @@
-const fetch = require("isomorphic-unfetch");
-import Navbar from "../components/nav";
-import Footer from "../components/nav_footer";
-import Link from "next/Link";
+const fetch = require("isomorphic-unfetch")
+import Navbar from "../components/nav"
+import Footer from "../components/nav_footer"
+import Link from "next/link"
 
 const Home = ({ posts }) => {
   return (
@@ -24,18 +24,18 @@ const Home = ({ posts }) => {
               </div>
             </div>
           </div>
-        );
+        )
       })}
       <Footer />
     </body>
-  );
-};
+  )
+}
 
 Home.getInitialProps = async () => {
-  const res = await fetch("http://localhost:3000/api/posts");
-  const { data } = await res.json();
+  const res = await fetch("http://localhost:3000/api/posts")
+  const { data } = await res.json()
 
-  return { posts: data };
-};
+  return { posts: data }
+}
 
-module.exports = Home;
+module.exports = Home
