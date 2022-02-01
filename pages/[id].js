@@ -1,5 +1,4 @@
 const fetch = require("isomorphic-unfetch")
-
 const Post = ({ post }) => {
   return (
     <div className="post-container">
@@ -8,6 +7,7 @@ const Post = ({ post }) => {
         <p>{post.title}</p>
         <p>{post.text}</p>
       </div>
+      <comment />
     </div>
   )
 }
