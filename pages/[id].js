@@ -1,7 +1,7 @@
 const fetch = require("isomorphic-unfetch")
 import Navuser from "../components/nav_user"
 import Footer from "../components/nav_footer"
-import Link from "next/Link"
+import Link from "next/link"
 
 const Post = ({ post }) => {
   return (
