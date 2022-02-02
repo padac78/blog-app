@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 const fetch = require("isomorphic-unfetch")
 import Navbar from "../components/nav"
 import Footer from "../components/nav_footer"
@@ -14,7 +15,7 @@ const Home = ({ posts }) => {
               <div className="text-4xl font-medium text-black">
                 {post.title}
               </div>
-              <p className="text-slate-500">{post.text}</p>
+              <p className="text-slate-500">{post.text.substring(0, 50)}..."</p>
               <div>
                 (
                 <Link href="/[id]" as={`/${post._id}`}>
