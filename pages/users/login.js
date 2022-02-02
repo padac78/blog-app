@@ -1,11 +1,10 @@
-const fetch = require("isomorphic-unfetch");
-import Navuser from "../../components/nav_user";
-import Footer from "../../components/nav_footer";
-import Link from "next/Link";
-import React, { useState } from "react";
+const fetch = require("isomorphic-unfetch")
+import Navuser from "../../components/nav_user"
+import Footer from "../../components/nav_footer"
+import React, { useState } from "react"
 
 const Login = ({ login }) => {
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false)
   return (
     <body className="bg-slate-800">
       <Navuser />
@@ -49,7 +48,7 @@ const Login = ({ login }) => {
       </div>
       <Footer />
     </body>
-  );
-};
+  )
+}
 
-module.exports = Login;
+module.exports = Login
