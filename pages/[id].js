@@ -1,16 +1,17 @@
 const fetch = require("isomorphic-unfetch")
 import Navuser from "../components/nav_user"
 import Footer from "../components/nav_footer"
+import Link from "next/Link"
 
 const Post = ({ post }) => {
   return (
-    <body className="font-family-karla bg-white">
+    <body className="bg-slate-800">
       <Navuser />
 
       <div className="post-container">
-        <div className="mb-10 text-center text-sm" key={post._id}>
-          <p className="mb-10 text-5xl font-medium text-black">{post.title}</p>
-          <p className="text-2xl ">{post.text}</p>
+        <div className="mb-10 text-center text-sm " key={post._id}>
+          <p className="mb-10 text-5xl font-medium text-white">{post.title}</p>
+          <p className="text-2xl text-current ">{post.text}</p>
         </div>
       </div>
       <Footer />
