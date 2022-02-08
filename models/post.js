@@ -4,7 +4,6 @@ const postSchema = new mongoose.Schema({
   title: String,
   text: String,
   authorId: String,
-  comments: Array,
 })
 
 module.exports =
