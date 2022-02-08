@@ -1,43 +1,29 @@
 const fetch = require("isomorphic-unfetch")
-const { useState, useEffect } = require("react")
 const { useRouter } = require("next/router")
 import Navuser from "../../components/nav_user"
 import Footer from "../../components/nav_footer"
 
 const Post = ({ post }) => {
-  /*
-  const [confirm, setConfirm] = useState(false)
-  const [isDeleting, setIsDeleting] = useState(false)
   const router = useRouter()
 
-  useEffect(() => {
-    if (isDeleting) {
-      deletePost()
-    }
-  }, [isDeleting])
-
-  const open = () => setConfirm(true)
-
-  const close = () => setConfirm(false)
-
-  const deletePost = async () => {
-    const postId = router.query.id
-    try {
-      const deleted = await fetch(`http://localhost:3000/api/posts/${postId}`, {
-        method: "Delete",
-      })
-
-      router.push("/")
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
   const handleDelete = async () => {
-    setIsDeleting(true)
-    close()
+    if (confirm("Voulez-vous vraiment supprimer?") == true) {
+      try {
+        fetch(`http://localhost:3000/api/posts/${post._id}`, {
+          method: "DELETE",
+        })
+
+        router.push("/")
+      } catch (error) {
+        console.log(error)
+      }
+    }
   }
-  */
+
+  const redirect = async () => {
+    router.push(`./${post._id}/edit`)
+  }
+
   return (
     <body className="font-family-karla bg-white">
       <Navuser />
@@ -46,6 +32,20 @@ const Post = ({ post }) => {
         <div className="mb-10 text-center text-sm" key={post._id}>
           <p className="mb-10 text-5xl font-medium text-black">{post.title}</p>
           <p className="text-2xl ">{post.text}</p>
+          <button
+            type="button"
+            className="rounded-full bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+            onClick={redirect}
+          >
+            Editer
+          </button>
+          <button
+            type="button"
+            className="rounded-full bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+            onClick={handleDelete}
+          >
+            Supprimer
+          </button>
         </div>
       </div>
       <Footer />
