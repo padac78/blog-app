@@ -16,6 +16,13 @@ export default function Navbar() {
           </a>
         </Link>
       </li>
+      <li className="mr-3">
+        <Link href="/new">
+          <a className="text-white-500 inline-block  rounded border-white py-2 px-4 hover:border-gray-200 hover:bg-gray-600">
+            Créer un article
+          </a>
+        </Link>
+      </li>
     </ul>
   )
 }
