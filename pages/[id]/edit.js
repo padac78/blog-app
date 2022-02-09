@@ -2,6 +2,8 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import fetch from "isomorphic-unfetch"
 import { useRouter } from "next/router"
+import Navuser from "../components/nav_user"
+import Footer from "../components/nav_footer"
 
 const EditPost = ({ post }) => {
   const router = useRouter()

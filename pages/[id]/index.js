@@ -25,13 +25,14 @@ const Post = ({ post }) => {
   }
 
   return (
-    <body className="font-family-karla bg-white">
+    <body className="bg-slate-800">
       <Navuser />
 
       <div className="post-container">
         <div className="mb-10 text-center text-sm" key={post._id}>
-          <p className="mb-10 text-5xl font-medium text-black">{post.title}</p>
-          <p className="text-2xl ">{post.text}</p>
+          <p className="mb-10 text-5xl font-medium text-white">{post.title}</p>
+          <p className="text-2xl text-white ">{post.text}</p>
+
           <button
             type="button"
             className="rounded-full bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"

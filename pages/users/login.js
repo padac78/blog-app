@@ -8,7 +8,6 @@ const Login = ({ login }) => {
   return (
     <body className="bg-slate-800">
       <Navuser />
-
       <div className="bg-slate-800">
         <div className="px-6 py-5">
           <form className="flex flex-col">
