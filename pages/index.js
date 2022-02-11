@@ -15,7 +15,9 @@ const Home = ({ posts }) => {
               <div className="text text-2xl font-medium ">
                 {post.title}
                 <div>
-                <p className="text-slate-500">{post.text.substring(0, 50)}..."</p>
+                  <p className="text-slate-500">
+                    {post.text.substring(0, 50)}..."
+                  </p>
                   <Link
                     className="bg-sky-rounded rounded-full border-none bg-blue-500 py-2 px-4 px-4 py-2 text-white text-white hover:border-gray-200"
                     href="/[id]"

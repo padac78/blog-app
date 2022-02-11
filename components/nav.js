@@ -2,27 +2,28 @@ import Link from "next/link"
 
 export default function Navbar() {
   return (
-    <ul className="inline-block flex flex justify-center  rounded py-2 px-4 text-white hover:bg-slate-900">
-      <li className="flex justify-center">
-        <a className=" text-white-500 inline-block  rounded border-white py-2 px-4 ">
-          Bienvenue sur le CringeBlog
-        </a>
-      </li>
-
-      <li className="mr-3">
-        <Link href="/users/login">
-          <a className="text-white-500 inline-block  rounded border-white py-2 px-4 hover:border-gray-200 hover:bg-gray-600">
-            Se connecter / Créer son Compte
+    <body>
+      <div>
+        <li className="inline-block flex flex justify-center  rounded bg-slate-900 py-2 px-4 text-white">
+          <a className=" inline-block flex flex justify-center  rounded bg-slate-900 py-2 px-4  text-white">
+            Bienvenue sur le CringeBlog
           </a>
-        </Link>
-      </li>
-      <li className="mr-3">
-        <Link href="/new">
-          <a className="text-white-500 inline-block  rounded border-white py-2 px-4 hover:border-gray-200 hover:bg-gray-600">
-            Créer un article
-          </a>
-        </Link>
-      </li>
-    </ul>
+          <li className="justify-center">
+            <Link href="/users/login">
+              <a className="inline-block rounded   py-2 px-4 text-white hover:border-gray-800 hover:bg-slate-900">
+                Se connecter / Créer son Compte
+              </a>
+            </Link>
+          </li>
+          <li className="justify-center">
+            <Link href="/new">
+              <a className="inline-block rounded   py-2 px-4 text-white hover:border-gray-800 hover:bg-slate-900">
+                Créer un article
+              </a>
+            </Link>
+          </li>
+        </li>
+      </div>
+    </body>
   )
 }
