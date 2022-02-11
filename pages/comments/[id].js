@@ -1,7 +1,6 @@
 const fetch = require("isomorphic-unfetch")
 import Navuser from "../../components/nav_user"
 import Footer from "../../components/nav_footer"
-import Link from "next/link"
 
 const Comment = ({ comment }) => {
   return (
